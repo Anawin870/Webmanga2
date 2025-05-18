@@ -161,18 +161,3 @@
         }
     ]
 }
-"""
-
-# แก้ไข JSON
-fixed_json = fix_manga_structure(input_json)
-
-if fixed_json:
-    print("ผลลัพธ์หลังจากแก้ไข:")
-    print(fixed_json)
-    
-    # บันทึกเป็นไฟล์ (ถ้าต้องการ)
-    with open('fixed_manga.json', 'w', encoding='utf-8') as f:
-        f.write(fixed_json)
-    print("\nบันทึกไฟล์สำเร็จเป็น fixed_manga.json")
-else:
-    print("ไม่สามารถแก้ไขไฟล์ JSON ได้")
