@@ -95,13 +95,13 @@
     },
     {
       "id": 2,
-      "title": "Solo Leveling",
-      "description": "เรื่องราวของฮีโร่ที่อ่อนแอที่สุดที่กลายเป็นผู้แข็งแกร่งที่สุด",
+      "title": "test",
+      "description": "test",
       "cover": "https://example.com/solo-leveling-cover.jpg",
       "chapters": [
         {
           "number": 179,
-          "title": "การกลับมาของราชา",
+          "title": "test",
           "pages": [
             "https://example.com/solo-leveling-179-1.jpg",
             "https://example.com/solo-leveling-179-2.jpg"
