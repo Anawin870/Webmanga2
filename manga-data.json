@@ -1,16 +1,4 @@
 {
-  "users": [
-    {
-      "username": "admin",
-      "password": "admin123",
-      "isAdmin": true
-    },
-    {
-      "username": "user1",
-      "password": "password123",
-      "isAdmin": false
-    }
-  ],
   "manga": [
     {
       "id": 1,
@@ -119,6 +107,8 @@
             "https://i.postimg.cc/02GwSL6F/Upload-Fight-Class-3-3-VGSRC-By-Niceoppai.jpg",
             "https://i.postimg.cc/Dm3fpYRN/Upload-Fight-Class-3-3-VU4-O7-By-Niceoppai.jpg",
             "https://i.postimg.cc/MZC7V79M/Upload-Fight-Class-3-3-WZHYU-By-Niceoppai.jpg"
+          ]
+        }
       ]
     },
     {
@@ -137,6 +127,5 @@
         }
       ]
     }
-  ],
-  "currentUser": null
+  ]
 }
