@@ -14,16 +14,16 @@
   "manga": [
     {
       "id": 1,
-      "title": "One Piece2",
+      "title": "Fight​ Class​ 3",
       "description": "เรื่องราวการผจญภัยของลูฟี่และลูกเรือโจรสลัดหมวกฟาง",
-      "cover": "https://example.com/one-piece-cover.jpg",
+      "cover": "https://i.postimg.cc/zvrb35Nx/images-3.jpg",
       "chapters": [
         {
-          "number": 1050,
-          "title": "การต่อสู้ครั้งสำคัญ",
+          "number": 1,
+          "title": "ยกที่1",
           "pages": [
-            "https://example.com/one-piece-1050-1.jpg",
-            "https://example.com/one-piece-1050-2.jpg",
+            "https://i.postimg.cc/CKCdtXkD/37-20240408050421.png",
+            "https://i.postimg.cc/Xv5D0cY9/IMG-5923.jpg",
             "https://example.com/one-piece-1050-3.jpg"
           ]
         },
