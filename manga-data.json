@@ -3,6 +3,9 @@
         {
             "id": 1,
             "title": "Fight​ Class​ 3",
+            "author":"2 Hak Hyun",
+            "status":"ยังไม่จบ",
+            "genres":["เเอคชั่น","ดราม่า","โรงเรียน"],
             "description": "เรื่องราวการผจญภัยของลูฟี่และลูกเรือโจรสลัดหมวกฟาง",
             "cover": "https://i.postimg.cc/zvrb35Nx/images-3.jpg",
             "chapters": [
