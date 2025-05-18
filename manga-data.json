@@ -1,3 +1,44 @@
+import json
+
+def fix_manga_structure(input_data):
+    # แปลง JSON เป็น dictionary
+    try:
+        data = json.loads(input_data)
+    except json.JSONDecodeError as e:
+        print(f"ข้อผิดพลาดในการอ่าน JSON: {e}")
+        return None
+    
+    # ตรวจสอบโครงสร้างและแก้ไข
+    if "manga" not in data:
+        print("ไม่พบ key 'manga' ใน JSON")
+        return None
+    
+    fixed_manga = []
+    
+    for item in data["manga"]:
+        # ถ้าเป็น manga ใหม่
+        if "id" in item:
+            # สร้าง manga ใหม่
+            manga = {
+                "id": item["id"],
+                "title": item["title"],
+                "description": item["description"],
+                "cover": item["cover"],
+                "chapters": item.get("chapters", [])
+            }
+            fixed_manga.append(manga)
+        # ถ้าเป็น chapter ที่หลุดมา
+        elif "number" in item and fixed_manga:
+            # เพิ่ม chapter เข้าไปใน manga ล่าสุด
+            fixed_manga[-1]["chapters"].append(item)
+    
+    # สร้างโครงสร้างใหม่ที่ถูกต้อง
+    fixed_data = {"manga": fixed_manga}
+    
+    return json.dumps(fixed_data, indent=4, ensure_ascii=False)
+
+# JSON ต้นฉบับที่มีปัญหา
+input_json = """
 {
     "manga": [
         {
@@ -112,7 +153,7 @@
                 {
                     "number": 4,
                     "title": "ยกที่4",
-                    "pages":[
+                    "pages": [
                         "https://img2.pic.in.th/pic/1000037624.jpg",
                         "https://img2.pic.in.th/pic/1000037623.jpg",
                         "https://img5.pic.in.th/file/secure-sv1/1000037622.jpg",
@@ -121,7 +162,7 @@
                         "https://img5.pic.in.th/file/secure-sv1/1000037619.jpg",
                         "https://img2.pic.in.th/pic/1000037618.jpg",
                         "https://img5.pic.in.th/file/secure-sv1/1000037617.jpg",
-                        "https://img2.pic.in.th/pic/1000037616..jpg",
+                        "https://img2.pic.in.th/pic/1000037616.jpg",
                         "https://img5.pic.in.th/file/secure-sv1/1000037615.jpg",
                         "https://img2.pic.in.th/pic/1000037614.jpg",
                         "https://img5.pic.in.th/file/secure-sv1/1000037613.jpg",
@@ -140,7 +181,9 @@
                         "https://img2.pic.in.th/pic/1000037600.jpg",
                         "https://img5.pic.in.th/file/secure-sv1/1000037599.jpg"
                     ]
-                },
+                }
+            ]
+        },
         {
             "id": 2,
             "title": "test",
@@ -159,3 +202,18 @@
         }
     ]
 }
+"""
+
+# แก้ไข JSON
+fixed_json = fix_manga_structure(input_json)
+
+if fixed_json:
+    print("ผลลัพธ์หลังจากแก้ไข:")
+    print(fixed_json)
+    
+    # บันทึกเป็นไฟล์ (ถ้าต้องการ)
+    with open('fixed_manga.json', 'w', encoding='utf-8') as f:
+        f.write(fixed_json)
+    print("\nบันทึกไฟล์สำเร็จเป็น fixed_manga.json")
+else:
+    print("ไม่สามารถแก้ไขไฟล์ JSON ได้")
