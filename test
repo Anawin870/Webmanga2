@@ -1,0 +1,19 @@
+{
+  "manga": [
+    {
+      "id": 1,
+      "title": "Fight Class 3",
+      "cover": "https://i.imgur.com/ตัวอย่างรหัสภาพ.jpg",
+      "chapters": [
+        {
+          "number": 1,
+          "album": "https://imgur.com/a/test-iBGJIVw"
+        },
+        {
+          "number": 2,
+          "album": "https://imgur.com/a/รหัสอัลบั้ม2"
+        }
+      ]
+    }
+  ]
+}
