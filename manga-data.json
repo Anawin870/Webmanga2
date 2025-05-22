@@ -477,13 +477,13 @@
         },
         {
             "id": 2,
-            "title": "test",
+            "title": "Solo Leveling",
             "description": "test",
-            "cover": "https://example.com/solo-leveling-cover.jpg",
+            "cover": "https://img5.pic.in.th/file/secure-sv1/1000037978.jpg",
             "chapters": [
                 {
-                    "number": 179,
-                    "title": "test",
+                    "number": 1,
+                    "title": "ตอนที่1",
                     "pages": [
   "https://img5.pic.in.th/file/secure-sv1/1000037970.jpeg",
   "https://img2.pic.in.th/pic/1000037971.jpeg",
